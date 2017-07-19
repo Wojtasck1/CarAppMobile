@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './http/http.component.html',
   styleUrls: ['./http/http.component.css']
 })
-export class HttpComponent {
+export class HttpComponent {  
 
 getData : string;
 postData: string; 
