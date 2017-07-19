@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-http',
-  templateUrl: './http.component.html',
-  styleUrls: ['./http.component.css']
+  templateUrl: './http/http.component.html',
+  styleUrls: ['./http/http.component.css']
 })
 export class HttpComponent {
 
