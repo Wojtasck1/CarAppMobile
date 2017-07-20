@@ -10,5 +10,4 @@ export class HttpComponent {
 getData : string;
 postData: string; 
 
- 
 }
