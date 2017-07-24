@@ -1,1 +1,7 @@
-<Button text="MESSAGE"></Button>
+<ListView [items]="items" (itemTap)="onItemTap($event)" class="list-group"> 
+    <template let-item="item" let-odd="odd" let-even="even">
+        <StackLayout>
+            <Label [text]="item.title" class="list-group" (tap)="addTicker(item.$title)"></Label>
+        </StackLayout>
+    </template> 
+</ListView>

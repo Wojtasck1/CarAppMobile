@@ -1,10 +1,11 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { TableComponent } from "./table/table.component";
+
 import { HttpComponent } from './http/http.component'; 
 import { HttpCarService } from './http/http-car.service'; 
 
-
+import { DataServiceComponent } from "./dataService/dataService.service";
 import { AppComponent } from "./app.component";
 
 
@@ -12,6 +13,7 @@ import { AppComponent } from "./app.component";
   declarations: [AppComponent,TableComponent,HttpComponent,HttpCarService],
   bootstrap: [AppComponent],
   imports: [NativeScriptModule],
-  schemas: [NO_ERRORS_SCHEMA],
+  schemas: [NO_ERRORS_SCHEMA], 
+  providers:[DataServiceComponent],
 })
 export class AppModule {}

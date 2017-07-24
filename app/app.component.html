@@ -1,15 +1,21 @@
-<ActionBar title="Kwant CarApp"></ActionBar>
-<StackLayout class="p20">
-    <Label text="asdsadsadsadas"></Label>
-    <FlexboxLayout>
+ <!-- <ActionBar title="Kwant CarApp"></ActionBar> -->
+<!-- <StackLayout class="p20"> -->
+    <!-- <Label text="asdsadsadsadas"></Label> -->
+    <!-- <FlexboxLayout>
         <Button text="PHONE"></Button>
         <Button text="MESSAGE"></Button>
         <tab-compnent></tab-compnent>
-    </FlexboxLayout>
-        <tab-compnent></tab-compnent>
-
-    <FlexboxLayout>
-
-    </FlexboxLayout> 
-
-</StackLayout>
+    </FlexboxLayout>  -->
+     <ActionBar title="Kwant CarApp"> 
+    <ActionItem text="Add" ios.position="right" (tap)="addTicker()"></ActionItem>
+</ActionBar>
+<tab-compnent></tab-compnent>
+<ListView [items]="items" (itemTap)="onItemTap($event)" class="list-group"> 
+    <template let-item="item" let-odd="odd" let-even="even">
+        <StackLayout>
+            <Label [text]="item.title" class="list-group" (tap)="addTicker(item.$title)"></Label>
+        </StackLayout>
+    </template>
+</ListView>
+<!--  
+</StackLayout> -->
