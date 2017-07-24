@@ -1,6 +1,5 @@
 import { Component } from "@angular/core";
-import { Car } from "../domain/car";
-// import { HttpCarService } from "../http/http-car.service";
+import { Router } from "@angular/router";
 
 @Component({ 
   selector: "tab-compnent",
@@ -9,22 +8,11 @@ import { Car } from "../domain/car";
 })  
 
 export class TableComponent {
+ 
+    public constructor(private router: Router) {}
+ 
+    public navigateToOtherChild() {
+        this.router.navigate(["/car"]);
+    }
 
-  cars: Car[];
-  errorString: string;  
-
-
-//   public getCars(){
-//   this.httpCarService.getCars().subscribe(
-//     cars => this.cars = cars,
-//     error => this.errorString = <any> error
-//   );
-// }
-
-//   constructor(protected httpCarService : HttpCarService){
-
-//     this.getCars;
-//     console.log(this.getCars);
-
-//   }
 } 
