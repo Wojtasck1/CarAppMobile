@@ -1,4 +1,12 @@
+<ActionBar title="Car List"></ActionBar>
 <StackLayout>
+    <router-outlet></router-outlet> 
     <Label text="Car Component" class="h2"></Label>
-<!--     <router-outlet></router-outlet> -->
+<ListView [items]="items" (loaded)="onLoaded(event)" (itemLoading)="onItemLoading(event)" (itemTap)="onItemTap(event)" class="list-group">
+    <ng-template let-item="item" let-odd="odd" let-even="even">
+      <StackLayout>
+        <Label [text]="item.title" class="list-group-item"></Label>
+      </StackLayout>
+    </ng-template>  
+</ListView>
 </StackLayout>   

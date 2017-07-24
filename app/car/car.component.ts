@@ -12,7 +12,17 @@ export class CarComponent {
   cars: Car[];
   errorString: string;   
 
+
+  public items: any[] = [
+    {title: 'NativeScript'},
+    {title: 'Angular'},
+    {title: 'TypeScript'},
+    {title: 'JavaScript'}
+  ]
  
+  // constructor(private router: AppRoutingModule){
+
+  // }
 //   public getCars(){
 //   this.httpCarService.getCars().subscribe(
 //     cars => this.cars = cars,
