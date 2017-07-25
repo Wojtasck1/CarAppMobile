@@ -4,8 +4,8 @@ import { Router } from "@angular/router";
 
 
 @Component({  
-  selector: "cars-compnent",
-  templateUrl: "./cars/cars.component.html",  
+  selector: "car-compnent",
+  templateUrl: "./car/car.component.html",  
 
 })  
 
