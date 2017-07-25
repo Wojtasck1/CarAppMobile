@@ -1,12 +1,16 @@
-<ActionBar title="Cars List"> </ActionBar>
-<StackLayout>
-    <!-- <router-outlet></router-outlet>  --> 
-    <Label text="Cars Component" class="h2"></Label>
-<ListView [items]="items" (loaded)="onLoaded(event)" (itemLoading)="onItemLoading(event)" (itemTap)="onItemTap(event)" class="list-group">
-    <ng-template let-item="item" let-odd="odd" let-even="even">
-      <StackLayout>
-        <Label [text]="item.title" class="list-group-item"></Label>
-      </StackLayout>
-    </ng-template>  
-</ListView>
-</StackLayout>   
+ <StackLayout>
+    <GridLayout rows="auto" columns="*, auto" margin="5" marginTop="15">
+        <TextField #carName hint="car Name" row="0" col="0" class="text-input"></TextField>
+        <Button text="Add" (tap)="add(carName.text); carName.text = ''" class="btn btn-primary" row="0" col="1"></Button>
+    </GridLayout> 
+    <Label text="car List" class="h2"></Label>
+    <ScrollView>
+        <StackLayout>
+             <GridLayout *ngFor="let car of cars" rows="auto" columns="30, *, 10" > <!--class="hero-grid-item"> -->
+<!--                 <Label text="{{ car.id }}" row="0" col="0"></Label> -->
+                <Label text="{{ car.name }}" row="0" col="1" (tap)="edit(car.id)"></Label>
+                <Label text="x" row="0" col="2" (tap)="remove(car.id)"></Label>
+            </GridLayout>
+        </StackLayout>
+    </ScrollView>
+</StackLayout>  

@@ -3,6 +3,7 @@ import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { Routes } from "@angular/router";
 import { TableComponent } from "./table/table.component";
 import { CarsComponent } from "./cars/cars.component";
+import { CarComponent } from "./car/car.component";
 
 
 const routes: Routes = [
@@ -10,12 +11,12 @@ const routes: Routes = [
         children: [
             { path: "", component: TableComponent },
             { path: "cars", component: CarsComponent },
-            { path: "car/:id", component: CarsComponent},
+            { path: "car/:id", component: CarComponent},
         ]
     },
 //    { path: "otherparent", component: OtherParentComponent }
 ];
- 
+  
 @NgModule({
     imports: [NativeScriptRouterModule.forRoot(routes)],
     exports: [NativeScriptRouterModule]

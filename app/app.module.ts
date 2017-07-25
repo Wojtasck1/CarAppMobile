@@ -4,6 +4,8 @@ import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { TableComponent } from "./table/table.component";
 import { AppRoutingModule } from "./app.routing";
 import { CarsComponent } from "./cars/cars.component";
+import { CarComponent } from "./car/car.component";
+import { CarService } from "./dataService/data.Service";
 
 // import { HttpComponent } from './http/http.component'; 
 // import { HttpCarService } from './http/http-car.service'; 
@@ -15,9 +17,10 @@ import { AppComponent } from "./app.component";
 @NgModule({
   declarations: [
     AppComponent,
-    TableComponent,
-    CarsComponent 
-  ],
+    TableComponent, 
+    CarsComponent,
+    CarComponent
+  ], 
   bootstrap: [
     AppComponent
   ],
@@ -25,7 +28,7 @@ import { AppComponent } from "./app.component";
     NativeScriptModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [CarService],
   schemas: [NO_ERRORS_SCHEMA],
 })
 export class AppModule {}
