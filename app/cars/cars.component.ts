@@ -7,7 +7,7 @@ import { Car } from "../domain/car";
 
 })  
 
-export class CarComponent {
+export class CarsComponent {
 
   cars: Car[];
   errorString: string;   

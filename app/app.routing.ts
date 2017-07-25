@@ -2,13 +2,15 @@ import { NgModule } from "@angular/core";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { Routes } from "@angular/router";
 import { TableComponent } from "./table/table.component";
-import { CarComponent } from "./car/car.component";
+import { CarsComponent } from "./cars/cars.component";
+
 
 const routes: Routes = [
     { path: "", component: TableComponent,
         children: [
             { path: "", component: TableComponent },
-            { path: "car", component: CarComponent },
+            { path: "cars", component: CarsComponent },
+            { path: "car/:id", component: CarsComponent},
         ]
     },
 //    { path: "otherparent", component: OtherParentComponent }

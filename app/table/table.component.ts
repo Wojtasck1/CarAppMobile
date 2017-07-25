@@ -12,7 +12,7 @@ export class TableComponent {
     public constructor(private router: Router) {}
  
     public navigateToCar() {
-        this.router.navigate(["/car"]);
+        this.router.navigate(["/cars"]);
     }
 
 } 
