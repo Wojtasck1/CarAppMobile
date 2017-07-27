@@ -32,14 +32,14 @@ export class CarComponent implements OnInit {
             this.car = this.data.getCar(params["id"]); 
         }); 
     }
- 
+  
     public cancel() {
         this.location.back();
     }
  
-    public save(id: number, name: string) {
-        if(name != "") {
-            this.data.edit(name,id);
+    public save(id: number, plates: string) {
+        if(plates != "") {
+            this.data.edit(plates,id);
             this.location.back(); 
         }
     }

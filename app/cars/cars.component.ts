@@ -18,7 +18,7 @@ export class CarsComponent {
     public add(value: string) {
         if(value != "") {
             this.data.add(value);
-        }
+        } 
     }
  
     public remove(id: number) {
