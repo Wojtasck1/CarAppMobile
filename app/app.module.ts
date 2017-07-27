@@ -1,5 +1,6 @@
-import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
+import { NgModule , NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
+// import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 import { TableComponent } from "./table/table.component";
 import { AppRoutingModule } from "./app.routing";
@@ -25,6 +26,8 @@ import { AppComponent } from "./app.component";
     AppRoutingModule,
   ],
   providers: [DataService],
-  schemas: [NO_ERRORS_SCHEMA],
+  schemas: [NO_ERRORS_SCHEMA], 
 })
+
 export class AppModule {}
+ 
