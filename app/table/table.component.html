@@ -1,0 +1,12 @@
+ <StackLayout>
+      <router-outlet></router-outlet>    
+    <Label text="Table Component" class="h2"></Label>
+    <Button text="Navigate to Car" (tap)="navigateToCars()" class="btn btn-primary"></Button>
+</StackLayout>     
+
+<!-- <StackLayout>
+    <Label text="Top Heroes" class="h2"></Label>
+    <FlexboxLayout flexWrap="wrap" flexDirection="row">
+        <Label *ngFor="let car of cars" text="{{ car.name }}" (tap)="edit(car.id)" flexGrow="1"></Label><!-- class="hero-flexgrid-item"></Label>-->
+   <!-- </FlexboxLayout>
+</StackLayout> -->
