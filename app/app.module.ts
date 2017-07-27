@@ -8,7 +8,7 @@ import { CarComponent } from "./car/car.component";
 import { DataService } from "./dataService/data.Service";
 
 import { AppComponent } from "./app.component";
-
+ 
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { AppComponent } from "./app.component";
   ],
   imports: [
     NativeScriptModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [DataService],
   schemas: [NO_ERRORS_SCHEMA],
