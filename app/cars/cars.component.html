@@ -1,4 +1,5 @@
- <StackLayout>
+<ActionBar title="Lista samochodów"> </ActionBar> 
+<StackLayout>
     <GridLayout rows="auto" columns="*, auto" margin="5" marginTop="15">
         <TextField #carName hint="car Name" row="0" col="0" class="text-input"></TextField>
         <Button text="Add" (tap)="add(carName.text); carName.text = ''" class="btn btn-primary" row="0" col="1"></Button>
@@ -6,7 +7,7 @@
     <Label text="car List" class="h2"></Label>
     <ScrollView>
         <StackLayout>
-             <GridLayout *ngFor="let car of cars" rows="auto" columns="30, *, 10" > <!--class="hero-grid-item"> -->
+             <GridLayout *ngFor="let car of cars" rows="auto" columns="30, *, 10" >
                 <Label text="{{ car.id }}" row="0" col="0"></Label>
                 <Label text="{{ car.plates }}" row="0" col="1" (tap)="edit(car.id)"></Label>
                 <Label text="x" row="0" col="2" (tap)="remove(car.id)"></Label>
