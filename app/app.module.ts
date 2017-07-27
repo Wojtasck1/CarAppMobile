@@ -5,11 +5,7 @@ import { TableComponent } from "./table/table.component";
 import { AppRoutingModule } from "./app.routing";
 import { CarsComponent } from "./cars/cars.component";
 import { CarComponent } from "./car/car.component";
-import { CarService } from "./dataService/data.Service";
-
-// import { HttpComponent } from './http/http.component'; 
-// import { HttpCarService } from './http/http-car.service'; 
-
+import { DataService } from "./dataService/data.Service";
 
 import { AppComponent } from "./app.component";
 
@@ -28,7 +24,7 @@ import { AppComponent } from "./app.component";
     NativeScriptModule,
     AppRoutingModule
   ],
-  providers: [CarService],
+  providers: [DataService],
   schemas: [NO_ERRORS_SCHEMA],
 })
 export class AppModule {}

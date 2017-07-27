@@ -7,10 +7,10 @@
     <ScrollView>
         <StackLayout>
              <GridLayout *ngFor="let car of cars" rows="auto" columns="30, *, 10" > <!--class="hero-grid-item"> -->
-<!--                 <Label text="{{ car.id }}" row="0" col="0"></Label> -->
-                <Label text="{{ car.name }}" row="0" col="1" (tap)="edit(car.id)"></Label>
+                <Label text="{{ car.id }}" row="0" col="0"></Label>
+                <Label text="{{ car.plates }}" row="0" col="1" (tap)="edit(car.id)"></Label>
                 <Label text="x" row="0" col="2" (tap)="remove(car.id)"></Label>
             </GridLayout>
         </StackLayout>
-    </ScrollView>
-</StackLayout>  
+    </ScrollView> 
+</StackLayout>   

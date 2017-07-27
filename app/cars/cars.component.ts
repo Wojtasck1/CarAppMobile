@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { Router } from "@angular/router";
-import { CarService } from "../dataService/data.Service";
+import { DataService } from "../dataService/data.Service";
+import { Car } from "../domain/car"
 
 @Component({
     selector: "cars",
@@ -8,9 +9,9 @@ import { CarService } from "../dataService/data.Service";
 }) 
 export class CarsComponent {
  
-    public cars: Array<any>; 
+    public cars: Array<Car>; 
  
-    public constructor(private router: Router, private data: CarService) {
+    public constructor(private router: Router, private data: DataService) {
         this.cars = this.data.getCars();
     }
  
@@ -25,7 +26,6 @@ export class CarsComponent {
     }
  
     public edit(id: number) {
-        this.router.navigate(["/car", id]);
+        this.router.navigate(["/car", id]);  
     }
- 
 }

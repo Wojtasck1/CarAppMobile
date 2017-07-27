@@ -11,8 +11,7 @@ export class TableComponent {
  
     public constructor(private router: Router) {}
  
-    public navigateToCar() {
+    public navigateToCars() {
         this.router.navigate(["/cars"]);
     }
-
 } 
