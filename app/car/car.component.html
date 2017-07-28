@@ -11,7 +11,7 @@
                     <Label text="Ubezpieczenie:" row="1" col="0"></Label>
                     <TextView #carInsurance hint="{{ car.insurance  }}" row="1" col="1" class="text-input" margin="0"></TextView> 
                 </StackLayout> 
-                <StackLayout class="input-field">
+                <StackLayout class="input-field"> 
                      <Label text="Przebieg:" row="1" col="0"></Label>
                     <TextView #carCourse hint="{{ car.course  }}" row="1" col="1" class="text-input" margin="0"></TextView> 
                 </StackLayout>
@@ -31,35 +31,3 @@
         </GridLayout> 
     </ScrollView>
 </GridLayout>
-
-
-
-
- 
-
-
-
-
-<!-- <StackLayout>
-    <Label text="{{ car.plates }} Details..." ></Label>
-    <GridLayout rows="*" columns="*">
-        <ScrollView row="0" col="0">
-            <StackLayout class="input-fielc">
-                <Label text="Tablice:" row="1" col="0"></Label>
-                <TextView #carName hint="{{ car.plates }}" row="1" col="1" class="text-input" margin="0"></TextView>
-            </StackLayout>
-        </ScrollView> -->
-
-
-<!--         <Label text="ID:" row="0" col="0"></Label>
-        <Label text="{{ car.id }}" row="0" col="1"></Label>
-        <Label text="Tablice:" row="1" col="0"></Label>
-        <TextView #carName hint="{{ car.plates }}" row="1" col="1" class="text-input" margin="0"></TextView>
-        <Label text="Przeglad:" row="2" col="0"></Label>
-        <TextView #carOverview hint="{{ car.overview }}" row="2" col="2" class="text-input" margin="0"></TextView>
-        <Button text="Cancel" (tap)="cancel()" margin="5" row="0" col="0"></Button>
-        <Button text="Save" (tap)="save(car.id, carName.text)" class="btn btn-primary" margin="5" row="0" col="1"></Button>
-     -->
-<!--     </GridLayout> -->
- <!-- <DatePicker (loaded)="onPickerLoaded($event)"> </DatePicker>  -->
-<!-- </StackLayout>  -->
