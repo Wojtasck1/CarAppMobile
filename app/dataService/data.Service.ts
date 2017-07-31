@@ -13,7 +13,7 @@ export class DataService {
                 "plates": "TKIYU32",
                 "overview": "2017-07-14 19:43:37 +0100",
                 "insurance": "2017-08-14 19:43:37 +0100",
-                "course":"150000",
+                "course": "150000",
                 "description":"samochod sprawny",
                 "users_id": 1,         
                 "last_oil_change": 150000
@@ -23,7 +23,7 @@ export class DataService {
                 "plates": "TK9528L",
                 "overview": "2017-07-14 19:43:37 +0100",
                 "insurance": "2017-08-14 19:43:37 +0100",
-                "course":"150000",
+                "course": "150000",
                 "description":"samochod sprawny",
                 "users_id": 2,  
                 "last_oil_change": 150000
@@ -33,7 +33,7 @@ export class DataService {
                 "plates": "TK1434N",
                 "overview": "2017-07-14 19:43:37 +0100",
                 "insurance": "2017-08-14 19:43:37 +0100",
-                "course":"150000",
+                "course": "150000",
                 "description":"samochod sprawny",
                 "users_id": 3,
                 "last_oil_change": 150000  
@@ -43,7 +43,7 @@ export class DataService {
                 "plates": "TK8740M",
                 "overview": "2017-07-14 19:43:37 +0100",
                 "insurance": "2017-08-14 19:43:37 +0100",
-                "course":"150000",
+                "course": "150000",
                 "description":"samochod sprawny",
                 "users_id": 4,  
                 "last_oil_change": 150000 
@@ -53,7 +53,7 @@ export class DataService {
                 "plates": "TK3740H", 
                 "overview": "2017-07-14 19:43:37 +0100",
                 "insurance": "2017-08-14 19:43:37 +0100",
-                "course":"150000",
+                "course": "150000",
                 "description":"samochod sprawny",
                 "users_id": 5, 
                 "last_oil_change": 150000 
@@ -63,7 +63,7 @@ export class DataService {
                 "plates": "TK9242J",
                 "overview": "2017-07-14 19:43:37 +0100",
                 "insurance": "2017-08-14 19:43:37 +0100",
-                "course":"150000",
+                "course": "150000",
                 "description":"samochod sprawny",
                 "users_id": 6,  
                 "last_oil_change": 150000
@@ -73,7 +73,7 @@ export class DataService {
                 "plates": "TK3619R",
                 "overview": "2017-07-14 19:43:37 +0100",
                 "insurance": "2017-08-14 19:43:37 +0100",
-                "course":"150000",
+                "course": "150000",
                 "description":"samochod sprawny",
                 "users_id": 7,  
                 "last_oil_change": 150000
@@ -83,7 +83,7 @@ export class DataService {
                 "plates": "TKI 04544",
                 "overview": "2017-07-14 19:43:37 +0100",
                 "insurance": "2017-08-14 19:43:37 +0100",
-                "course":"150000",
+                "course": "150000",
                 "description":"samochod sprawny",
                 "users_id": 8,  
                 "last_oil_change": 150000
@@ -123,14 +123,17 @@ export class DataService {
             }
         );
     }
- 
-    public edit(name: string, id: number) { 
+  
+    public edit(id: number , plates: string , course: string , description: string , users_id: string) { 
         for(let i = 0; i < this.cars.length; i++) {
             if(this.cars[i].id == id) {
-                this.cars[i].name = name;
-                break;
+                this.cars[i].plates = plates;
+                this.cars[i].course = course;
+                this.cars[i].description = description;
+                this.cars[i].users_id = users_id;
+                break; 
             }
-        }
+        } 
     }
 
 } 
