@@ -4,31 +4,35 @@
         <GridLayout rows="*" columns="*">
             <StackLayout class="form">
                  <StackLayout class="input-field"> 
-                    <Label text="Przeglad:" row="1" col="0"></Label>
-                    <TextView #carOverview hint="{{ car.overview }}" row="1" col="1" class="text-input" margin="0"></TextView>
+                    <Label text="Koniec Aktualnego Przegl" row="1" col="0"></Label>
+                    <DatePicker (loaded)="onPickerLoadedOverview($event)"> </DatePicker>
                 </StackLayout>
-                <StackLayout class="input-field"> 
-                    <Label text="Ubezpieczenie:" row="1" col="0"></Label>
-                    <TextView #carInsurance hint="{{ car.insurance  }}" row="1" col="1" class="text-input" margin="0"></TextView> 
-                </StackLayout> 
+                <StackLayout>
+                    <Label text="Koniec aktualnego ubezpieczenia:" row="1" col="0"></Label>
+                    <DatePicker (loaded)="onPickerLoadedInsurance($event)"> </DatePicker>
+                </StackLayout>
+                <!-- <StackLayout orientation="vertical"> 
+                    <Label text="Tablice:" row="1" col="0"></Label>
+                    <TextView #carPlates text="{{ car.plates }}"></TextView>
+                </StackLayout>  -->
                 <StackLayout class="input-field">
                      <Label text="Przebieg:" row="1" col="0"></Label>
-                    <TextView #carCourse hint="{{ car.course  }}" row="1" col="1" class="text-input" margin="0"></TextView> 
+                     <TextView #carCourse text="{{ car.course }}"></TextView>
                 </StackLayout>
                 <StackLayout class="input-field">
-                     <Label text="Opis:" row="1" col="0"></Label>
-                    <TextView #carDescription hint="{{ car.description }}" row="1" col="1" class="text-input" margin="0"></TextView> 
+                    <Label text="Opis:" row="1" col="0"></Label>
+                    <TextView #carDescription text="{{ car.description }}"></TextView>
                 </StackLayout>
                 <StackLayout class="input-field">
-                     <Label text="IdWłaściciela:" row="1" col="0"></Label>
-                    <TextView #carDescription hint="{{ car.users_id }}" row="1" col="1" class="text-input" margin="0"></TextView> 
+                    <Label text="IdWłaściciela:" row="1" col="0"></Label>
+                    <TextView #carUserId text="{{ car.users_id }}"></TextView>
                 </StackLayout>
-                <StackLayout> 
+                <StackLayout>  
                     <Button text="Cancel" (tap)="cancel()" margin="5" row="0" col="0"></Button>
-                    <Button text="Save" (tap)="save(car.id, carName.text)" class="btn btn-primary" margin="5" row="0" col="1"></Button>
+                    <Button text="Save" (tap)="save(car.id, carPlates.text , carCourse.text , carDescription.text , carUserId.text)" class="btn btn-primary" margin="5" row="0" col="1"></Button>
                </StackLayout>
-            </StackLayout>
-        </GridLayout> 
+            </StackLayout> 
+        </GridLayout>  
     </ScrollView>
 </GridLayout>
 
